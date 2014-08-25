@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dynamicWidget example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <button id="createTemplateExample">create template example</button>
+    <button id="destroyTemplateExample">destroy template example</button>
+    <p>widgets in subdirectories work too</p>
+    <button id="createSubDirectoryExample">create subdirectory example</button>
+    <button id="destroySubDirectoryExample">destroy subdirectory example</button>
+    
+    <h2>global configuration</h2>
+    <pre>dynamicWidgetParams = {
+        widgetJSDirectory: 'scripts/widgets/',//this is not necessary if you put your widgets in /scripts/widgets/
+        widgetCSSDirectory: 'styles/widgets/',//this is not necessary if you put your widgets in /styles/widgets/
+        cache: true,
+        widgets: {    //this is not needed unless you want to have a dynamic widget without any css
+          //to skip loading of css, 
+          //you need to build this object in your server language of choice.
+          //i recomend a recursive function that builds this based on if the file exists or not
+          //otherwise it is assumed that every dynamic widget has css and js
+          //widgetName: {loadCSS: false}
+        }
+      };</pre>
+    <h2>Widget Definition</h2>
+    <pre>jQuery.widget('dynamicWidget.template', $.dynamicWidget.base, { 
+  dw_init: function(){
+    console.log('init');
+  },
+  dw_destroy: function(){
+    console.log('destroy');
+  }
+});</pre>
+<p>
+  dynamicWidget names must contain the dynamicWidget. prefix
+</p>
+<p>
+  dynamicWidgets must use $.dynamicWidget.base as a base class for the widget.
+</p>
+
+<p>
+  init and destroy functions must be specified using the dw_ prefix.
+</p>
+
+<p>
+  this step is very important.  if you specific _init and destroy you will override dynamicWidgets handing of css
+</p>
+
+<p>
+  other than that its exactly a jquery ui widget
+</p>
+
+<h2>Usage</h2>
+<p>
+  creation: $(document).dynamicWidget("template");
+</p>
+
+<p>
+  destruction: $(document).dynamicWidget("template", "destroy");
+</p>
+
+<p>
+  Dynamic widgets function almost identical to standard jqueryUI widgets.  The only difference is everything must go through the dynamicWidget function. 
+</p>
+
+<p>
+  basically everything beyond the first parameter gets passed to the a jquery ui widget, so anything you want to pass will work the same way as with jquery ui
+</p>
+<p>
+  you can for example create a dynamic widget like this $(document).dynamicWidget("template", {yourOptions: yourValues});
+</p>
+
+<p>
+  or you can trigger a function to run on your widget like this $(document).dynamicWidget("template", "yourFunction");
+</p>
+
+<p>you can use dynamic widgets almost exactly like you use standard jqueryui widgets.  the only difference is you need to pass it through the dynamicWidget function with the first paramter being the name of the widget</p>    
+   
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js">
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js">
+    </script>
+    <script type="text/javascript" src="../dynamicWidget.min.js">
+    </script>
+    <script type="text/javascript">
+      dynamicWidgetParams = {
+        widgetJSDirectory: 'scripts/widgets/',//this is not necessary if you put your widgets in /scripts/widgets/
+        widgetCSSDirectory: 'styles/widgets/',//this is not necessary if you put your widgets in /styles/widgets/
+        cache: true,
+        widgets: {    //this is not needed unless you want to have a dynamic widget without any css
+          //to skip loading of css, 
+          //you need to build this object in your server language of choice.
+          //i recomend a recursive function that builds this based on if the file exists or not
+          //otherwise it is assumed that every dynamic widget has css and js
+          //widgetName: {loadCSS: false}
+        }
+      };
+            
+      $("#createTemplateExample").on('click', function(){
+          $(document).dynamicWidget("template");
+      });
+      $("#destroyTemplateExample").on('click', function(){
+          $(document).dynamicWidget("template", "destroy");
+      });
+      
+      $("#createSubDirectoryExample").on('click', function(){
+          $(document).dynamicWidget("subDirectoryExample/subDirectoryExample");
+      });
+      $("#destroySubDirectoryExample").on('click', function(){
+          $(document).dynamicWidget("subDirectoryExample/subDirectoryExample", "destroy");
+      });
+    </script>
+  </body>
+</html>
