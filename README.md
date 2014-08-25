@@ -56,4 +56,4 @@ or you can trigger a function to run on your widget like this
 $(document).dynamicWidget("template", "yourFunction");
 ```
 
-*you can use dynamic widgets almost exactly like you use standard jqueryui widgets.  the only difference is you need to pass it through the dynamicWidget function with the first paramter being the name of the widget
+* you can use dynamic widgets almost exactly like you use standard jqueryui widgets.  the only difference is you need to pass it through the dynamicWidget function with the first paramter being the name of the widget
