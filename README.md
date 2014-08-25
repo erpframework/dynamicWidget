@@ -8,7 +8,7 @@ Dynamic widget loading for  JQuery UI
 dynamicWidgetParams = {
 	widgetJSDirectory: 'scripts/widgets/',//this is not necessary if you put your widgets in /scripts/widgets/
 	widgetCSSDirectory: 'styles/widgets/',//this is not necessary if you put your widgets in /styles/widgets/
-	cache: true,
+	cache: false,
 	widgets: {    //this is not needed unless you want to have a dynamic widget without any css
 	  //to skip loading of css, 
 	  //you need to build this object in your server language of choice.
@@ -32,6 +32,7 @@ jQuery.widget('dynamicWidget.template', $.dynamicWidget.base, {
 * dynamicWidget names must contain the dynamicWidget. prefix
 * dynamicWidgets must use $.dynamicWidget.base as a base class for the widget.
 * init and destroy functions must be specified using the dw_ prefix.  this step is very important.  if you specific _init and destroy you will override dynamicWidgets handing of css
+* there are dw_ methods for all of the _ methods for jquery UI widgets.  If you need to override any of them use dw_ version.  They currently do not do anything but they are reserved for later usage
 * other than that its exactly a jquery ui widget
 
 ## Usage
