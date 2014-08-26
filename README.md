@@ -58,3 +58,17 @@ $(document).dynamicWidget("template", "yourFunction");
 ```
 
 * you can use dynamic widgets almost exactly like you use standard jqueryui widgets.  the only difference is you need to pass it through the dynamicWidget function with the first paramter being the name of the widget
+
+## Running the example
+
+* install node
+* open command line and navigate to the example directory
+* run 
+```
+npm install connect serve-static
+```
+* then anytime you want to run the server just run 
+```
+node server.js
+```
+* navigate to http://localhost:8080 in your browser of choice
