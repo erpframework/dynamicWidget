@@ -62,10 +62,11 @@ if (!window.dynamicWidgetParams) {
 
 jQuery.widget('dynamicWidget.base', {
   _init: function(){
+    console.log(1);
     if (this.dw_init) {
       var args = Array.prototype.slice.call(arguments);
       this.dw_init.apply(this, args);
-      
+      console.log(1);
       if (window.dynamicWidgetParams.widgets[this.widgetName].loadCSS){
         var cssUrl = window.dynamicWidgetParams.widgetCSSDirectory + this.widgetName + ".css";
         var cssId = cssUrl.replace(/[\./]/g, "_");
@@ -130,12 +131,6 @@ jQuery.widget('dynamicWidget.base', {
     if (this._hoverable) {
       var args = Array.prototype.slice.call(arguments);
       this._hoverable.apply(this, args);
-    }
-  },
-  _init: function(){
-    if (this.dw_init) {
-      var args = Array.prototype.slice.call(arguments);
-      this.dw_init.apply(this, args);
     }
   },
   _off: function(){
