@@ -3,6 +3,18 @@ dynamicWidget
 
 Dynamic widget loading for  JQuery UI
 
+## install 
+
+```
+bower install --save dynamicwidget
+```
+
+* optional: if you're using the gulp-webapp yeoman generator you can
+
+```
+gulp wiredep
+```
+
 ## global configuration
 ```javascript
 dynamicWidgetParams = {
