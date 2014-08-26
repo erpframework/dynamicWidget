@@ -1,0 +1,19 @@
+{
+  "name" : "dynamicWidget",
+  "email" : "michaeldewayneharris@gmail.com.com",
+  "url" : "https://github.com/michaeldewayneharris/dynamicWidget",
+  "title" : "Dynamic Widget",
+  "author" : {
+    "name" : "Michael Harris",
+    "email" : "michaeldewayneharris@gmail.com"
+  },
+  "licenses" : [{
+      "type" : "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+   "dependencies": {
+      "jquery": ">=1.11"
+      "jquery-ui": ">=1.11"
+    }
+}
