@@ -6,7 +6,8 @@
       ".git",
       ".gitignore",
       "bower.json",
-      "README.md"
+      "README.md",
+      "example"
   ],
   "dependencies": {
       "jquery": ">=1.11.1",
