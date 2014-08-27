@@ -1,7 +1,8 @@
 {
   "name" : "dynamicWidget",
-  "version": "0.0.5",  
+  "version": "0.0.6",  
   "title" : "Dynamic Widget",
+  "description": "Plugin for JQuery-UI that will retrieve widgets via ajax",
   "author" : {
     "name" : "Michael Harris",
     "email" : "michaeldewayneharris@gmail.com"
@@ -14,5 +15,8 @@
   "dependencies": {
       "jquery": ">=1.11",
       "jquery-ui": ">=1.11"
-    }
+  },
+  "bugs": "https://github.com/michaeldewayneharris/dynamicWidget/issues",
+  "homepage": "https://github.com/michaeldewayneharris/dynamicWidget",
+  "docs": "https://github.com/michaeldewayneharris/dynamicWidget"
 }
