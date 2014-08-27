@@ -1,4 +1,3 @@
-//version 0.0.1
 if (!window.dynamicWidgetParams) {
   window.dynamicWidgetParams = {
     widgetJSDirectory: '/scripts/widgets/',
