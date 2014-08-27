@@ -1,6 +1,6 @@
 {
   "name" : "dynamicWidget",
-  "version": "0.0.5",  
+  "version": "0.0.9",  
   "title" : "Dynamic Widget",
   "description": "Plugin for JQuery-UI that will retrieve widgets via ajax",
   "author" : {
