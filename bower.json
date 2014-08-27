@@ -1,6 +1,6 @@
 {
   "name": "dynamicWidget",
-  "version": "0.0.6",
+  "version": "0.0.5",
   "main": "dynamicWidget.min.js",
   "ignore": [
       ".git",
