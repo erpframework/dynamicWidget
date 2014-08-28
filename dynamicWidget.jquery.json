@@ -1,6 +1,6 @@
 {
   "name" : "dynamicWidget",
-  "version": "0.0.10",  
+  "version": "0.0.11",  
   "title" : "Dynamic Widget",
   "description": "Dynamic Widget is a plugin for JQuery UI that automates lazy loading JS and CSS for your JQuery UI widgets without the need to worry about includes.",
   "keywords": [
