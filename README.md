@@ -1,7 +1,7 @@
-dynamicWidget
+Dynamic Widget
 =============
 
-Dynamic widget loading for  JQuery UI
+Dynamic Widget is a plugin for JQuery UI that automates lazy loading JS and CSS for your JQuery UI widgets without the need to worry about includes.
 
 ## install 
 
