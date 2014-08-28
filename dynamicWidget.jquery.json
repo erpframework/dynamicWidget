@@ -1,8 +1,21 @@
 {
   "name" : "dynamicWidget",
-  "version": "0.0.9",  
+  "version": "0.0.10",  
   "title" : "Dynamic Widget",
-  "description": "Plugin for JQuery-UI that will retrieve widgets via ajax",
+  "description": "Dynamic Widget is a plugin for JQuery UI that automates lazy loading JS and CSS for your JQuery UI widgets without the need to worry includes.",
+  "keywords": [
+    "jquery",
+    "jquery-ui",
+    "dynamic",
+    "widget",
+    "ajax",
+    "lazy",
+    "loading",
+    "load",
+    "include",
+    "js",
+    "css"
+  ],
   "author" : {
     "name" : "Michael Harris",
     "email" : "michaeldewayneharris@gmail.com"

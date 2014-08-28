@@ -1,3 +1,4 @@
+//michaeldewayneharris@gmail.com
 if (!window.dynamicWidgetParams) {
   window.dynamicWidgetParams = {
     widgetJSDirectory: '/scripts/widgets/',
