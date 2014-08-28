@@ -5,6 +5,8 @@ Dynamic Widget is a plugin for JQuery UI that automates lazy loading JS and CSS 
 
 ## install 
 
+The simplest way to include dynamic widget is with bower.
+
 ```
 bower install --save dynamicwidget
 ```
@@ -14,6 +16,8 @@ bower install --save dynamicwidget
 ```
 gulp wiredep
 ```
+
+If you are not able to use bower in your project, simply add a a script include to dynamicWidget.min.js after your includes for JQuery and JQuery-ui
 
 ## global configuration
 ```javascript
